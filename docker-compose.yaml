@@ -1,0 +1,9 @@
+services:
+  pdf_service:
+    image: php:8.4-apache
+    container_name: pdf_generator
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
+    restart: always
