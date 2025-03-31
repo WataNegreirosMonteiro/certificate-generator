@@ -1,6 +1,6 @@
 <?php
 
-class Pdf {
+    class Certificate {
     public null|string $path;
     public null|string $fileName;
     public null|string $userOnCertificate;
@@ -12,30 +12,30 @@ class Pdf {
 }
 
 
-class PdfBuilder {
-    public Pdf $pdf;
+class CertificateBuilder {
+    public Certificate $certificate;
 
     function __construct()
     {
-        $this->pdf = new Pdf();
+        $this->certificate = new Certificate();
     }
 
     public function setPath($path) {
-        $this->pdf->path = $path;
+        $this->certificate->path = $path;
         return $this;
     }
 
     public function setFileName($fileName) {
-        $this->pdf->fileName = $fileName;
+        $this->certificate->fileName = $fileName;
         return $this;
     }
 
     public function setUserOnCertificate($userOnCertificate) {
-        $this->pdf->userOnCertificate = $userOnCertificate;
+        $this->certificate->userOnCertificate = $userOnCertificate;
         return $this;
     }
 
     public function get() {
-        return $this->pdf;
+        return $this->certificate;
     }
 }
